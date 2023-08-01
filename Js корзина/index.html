@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1" cellpadding="5" id="goods" class="sortable">
+        <thead>
+          <tr>
+            <th class="header">Name</th>
+            <th class="header int">Price</th>
+            <td class="header int"><b>Discount</b></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Хлеб</td>
+            <td>40</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>Молоко</td>
+            <td>70</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>Чокопай</td>
+            <td>150</td>
+            <td>20</td>
+          </tr>
+        </tbody>
+        <thead>
+          <tr>
+            <th class="header">Name</th>
+            <th class="header int">Price</th>
+            <td class="header int"><b>Discount</b></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Хлеб</td>
+            <td>40</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>Молоко</td>
+            <td>70</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>Чокопай</td>
+            <td>150</td>
+            <td>20</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table border="1" cellpadding="5" class="table-foots">
+        <thead>
+          <th>Товар</th>
+          <th>Цена</th>
+          <th>Кол-во</th>
+          <th>Стоимость</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Хлеб</td>
+            <td data-price="30">30 руб</td>
+            <td>
+                 <div class="counter">
+        <button class="counter__plus" data-n="-1">-</button>
+        <input type="text" name="" id="" value="1" max="150" min="0">
+        <button class="counter__plus" data-n="1">+</button>
+      </div>
+            </td>
+            <td data-sum="0"></td>
+          </tr>
+
+          <tr>
+            <td>Молоко</td>
+            <td data-price="55">55 руб</td>
+            <td>
+                 <div class="counter">
+        <button class="counter__plus" data-n="-1">-</button>
+        <input type="text" name="" id="" value="1" max="150" min="0">
+        <button class="counter__plus" data-n="1">+</button>
+      </div>
+            </td>
+            <td data-sum="0"></td>
+          </tr>
+
+          <tr>
+            <td>Яйцо</td>
+            <td data-price="70">70 руб</td>
+            <td>
+                 <div class="counter">
+        <button class="counter__plus" data-n="-1">-</button>
+        <input type="text" name="" id="" value="1" max="150" min="0">
+        <button class="counter__plus" data-n="1">+</button>
+      </div>
+            </td>
+            <td data-sum="0"></td>
+          </tr>
+
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3">Итого</td>
+            <td class="total">0</td>
+          </tr>
+        </tfoot>
+      </table>
+   
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- let elCounterRoot = document.querySelector('.counter')
+let elInput = elCounterRoot.querySelector('input');
+
+let elTrigger = elCounterRoot.querySelectorAll('.counter__plus');
+let clickHandler = (e) => {
+    // console.log(e.target);
+    // n = (e.target.classList.contains('minus')) ? -1 : 1;
+    let data= e.target.dataset;
+    let n = e.target.dataset.n;
+    counter_pus(n);
+}
+elTrigger.forEach(el => el.addEventListener('click', clickHandler));
+function counter_pus(n){
+  // n == 1 ? elInput.value++ : elInput.value--;
+  let value = +(elInput.value);
+  value += +n;
+  let {min, max} = elInput;
+  if(min.length > 0 && value < +min) return;
+  if(max.length > 0 && value > +max) return;
+  console.log(`min - ${min}; max - ${max}`); //деконструктор
+  elInput.value = value;
+  console.log(n, value);
+} -->

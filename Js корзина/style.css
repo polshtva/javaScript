@@ -1,0 +1,44 @@
+.sortable thead tr > *:after{
+    content:"";display:inline-block;
+    width:calc(0.7ex + 1px);
+    height:calc(0.7ex + 1px);
+    transform: rotate(-45deg);
+  /*   border:1px solid transparent; */
+  }
+  .sorted{ background: lime; }
+  .sorted:after{
+    content:"";display:inline-block;width:0.7ex;height:0.7ex;
+    vertical-align: middle;
+    border:1px solid black;
+    border-width: 1px 1px 0 0;
+    margin-left: 0.5ex;
+    transform: rotate(-45deg);
+    transition: 0.3s;
+  }
+  .sorted.reverse{ 
+    background: orange;
+  }
+  .sorted.reverse:after{
+    transform: rotate(135deg);
+  }
+  
+  .counter{
+    margin-top: 20px;
+  }
+  .counter input{
+    width: 4ex;
+    text-align: center;
+  }
+
+  .table-foots{
+    margin-top: 20px;
+  }
+
+  td[data-sum]::before{
+    content: attr(data-sum);
+  }
+
+  
+  td[data-sum]::after{
+    content: ' руб';
+  }
